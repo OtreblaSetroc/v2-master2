@@ -37,7 +37,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private  Location current;
     private  LocationManager locationManager;
     private GeosDB geosDB;
-    private List<Geos> geos;
     private SQLiteDatabase db;
     private int a = 3000;
 
@@ -68,7 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
-        geos= new ArrayList<>();
+
         geosDB = new GeosDB(this,"GeosDB",null,1);
         db=geosDB.getWritableDatabase();
     }
